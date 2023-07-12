@@ -14,7 +14,7 @@ export default function Home() {
     console.log("SELECTOR", cartProducts);
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_BASE_URL}${process.env.REACT_APP_MOCKS_PRODUCTS_PATH}`)
+        fetch("./mocks/products.json")
             .then(response => response.json())
             .then(result => {
                 if (result.products) {
